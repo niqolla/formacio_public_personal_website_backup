@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Get Alignment from UniProtIDs</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+        .text-container {
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .btn-primary {
+            background-color: #7278ad;
+            margin-left: 1cm;
+        }
+        .box-out {
+            border: 2px solid #7278ad;
+            border-radius: 10px;
+            padding: 20px;
+            overflow:auto;
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #0E1117;
+                color: white;
+            }
+            textarea {
+                background-color: rgb(63, 63, 63);
+                color: #ffffff;
+            }
+            select{
+                background-color: rgb(63, 63, 63);
+                columns: #fff;
+            }
+        }
+        </style>
+        
+</head>
+<body>
+    <div class="container">
+        <div class="box-out">
+        <h3>Get Alignment from UniProtIDs</h3>
+        <form method="post">
+            {% csrf_token %}
+            {{ form_uniprotIdForm.as_p }}
+            <input class="btn-primary" role="button" type="submit" name="form_uniprotIdForm" value="Align By UniProtID">
+        </form>
+        <hr>
+        <h3>Get Alignment from Sequences</h3>
+        <form method="post">
+            {% csrf_token %}
+            {{ form_SequencesForm.as_p }}
+            <input class="btn-primary" role="button" type="submit" name="form_SequencesForm" value="Align Sequnces">
+        </form>
+        <hr>
+        <h3>Get Alignment from File</h3>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form_FileUploadForm.as_p }}
+            <input class="btn-primary" role="button" type="submit" name="file" value="Align from File">
+        </form> 
+    </div>   
+    </div>
+</body>
+</html>

@@ -2807,3 +2807,4 @@ clu
 %0A%0AThe erorrs were:%0A>JED%0AJKSKKAJK%0A>DEJ%0AJKSAAAAA%0A
 [pid: 10002|app: 0|req: 38/38] 10.5.196.204 () {56 vars in 1486 bytes} [Wed Apr  5 07:07:28 2023] POST /u217733//clustalo => generated 1783 bytes in 2040 msecs (HTTP/1.1 200) 6 headers in 208 bytes (1 switches on core 0)
 [pid: 10002|app: 0|req: 39/39] 10.5.196.204 () {60 vars in 1009 bytes} [Wed Apr 12 08:54:54 2023] GET /u217733//clustalo => generated 4688 bytes in 57 msecs (HTTP/1.1 200) 8 headers in 358 bytes (1 switches on core 0)
+[pid: 10002|app: 0|req: 40/40] 10.5.196.204 () {50 vars in 787 bytes} [Mon Apr 24 18:12:02 2023] GET /u217733//clustalo => generated 4688 bytes in 660 msecs (HTTP/1.1 200) 8 headers in 358 bytes (1 switches on core 0)
